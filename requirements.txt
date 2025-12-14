@@ -1,0 +1,24 @@
+# NextWord AI - Both Versions
+# Requirements for GloVe LSTM and GPT-2 implementations
+
+# Core ML
+torch
+torchvision
+
+# Transformers (for GPT-2)
+transformers
+datasets
+accelerate
+
+# UI
+streamlit
+plotly
+
+# Data Processing
+numpy
+pandas
+requests
+
+# Utilities
+tqdm
+matplotlib

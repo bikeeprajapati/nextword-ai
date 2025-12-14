@@ -1,0 +1,361 @@
+# NextWord AI - .gitignore
+# Optimized for PyTorch, Transformers, and Streamlit projects
+
+# ============================================================================
+# Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================================
+# Virtual Environments
+# ============================================================================
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# ============================================================================
+# PyTorch & Machine Learning
+# ============================================================================
+# Model checkpoints (large files)
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Trained models directory (keep structure, ignore files)
+models/*.pth
+models/*.pt
+models/glove_model.pth
+models/gpt2_finetuned/*.bin
+models/gpt2_finetuned/*.safetensors
+
+# IMPORTANT: Keep model config files
+!models/config.json
+!models/*.json
+
+# Training logs
+logs/
+runs/
+wandb/
+mlruns/
+*.log
+
+# TensorBoard
+events.out.tfevents.*
+
+# ============================================================================
+# Hugging Face Transformers
+# ============================================================================
+# Downloaded models (can be large)
+models/gpt2_finetuned/pytorch_model.bin
+models/gpt2_finetuned/model.safetensors
+transformers_cache/
+.cache/
+~/.cache/huggingface/
+
+# ============================================================================
+# Data Files
+# ============================================================================
+# Large datasets
+data/*.txt
+data/*.csv
+data/*.json
+data/sample_text.txt
+
+# GloVe embeddings (very large!)
+data/glove/*.txt
+data/glove/*.zip
+data/glove.6B.*
+
+# Processed data (can regenerate)
+data/sequences.txt
+data/processed/
+
+# IMPORTANT: Keep small example files
+!data/example.txt
+!data/README.md
+!data/.gitkeep
+
+# ============================================================================
+# Jupyter Notebooks
+# ============================================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+Untitled*.ipynb
+
+# ============================================================================
+# IDEs and Editors
+# ============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ============================================================================
+# Operating System
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================================================
+# Streamlit
+# ============================================================================
+.streamlit/secrets.toml
+.streamlit/config.toml
+*.streamlit/
+
+# ============================================================================
+# Testing
+# ============================================================================
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+htmlcov/
+
+# ============================================================================
+# Documentation
+# ============================================================================
+docs/_build/
+docs/_static/
+docs/_templates/
+site/
+.sphinx/
+
+# ============================================================================
+# Temporary Files
+# ============================================================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+tmp/
+temp/
+
+# ============================================================================
+# Environment Variables
+# ============================================================================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ============================================================================
+# Compiled Files
+# ============================================================================
+*.pyc
+*.pyo
+*.pyd
+
+# ============================================================================
+# Project-Specific
+# ============================================================================
+# Training outputs
+outputs/
+checkpoints/
+results/
+experiments/
+
+# Generated visualizations
+*.png
+*.jpg
+*.jpeg
+*.gif
+plots/
+figures/
+
+# IMPORTANT: Keep README images
+!images/*.png
+!docs/*.png
+!assets/*.png
+
+# Debug files
+debug/
+*.debug
+
+# Benchmark results
+benchmarks/
+*.benchmark
+
+# ============================================================================
+# Package Files
+# ============================================================================
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# IMPORTANT: Keep required downloads
+!requirements.txt
+!setup.py
+!pyproject.toml
+
+# ============================================================================
+# Security
+# ============================================================================
+*.pem
+*.key
+*.cert
+secrets/
+credentials/
+
+# ============================================================================
+# Cloud & Deployment
+# ============================================================================
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
+*.json
+
+# Docker
+*.dockerignore
+
+# Heroku
+.heroku/
+
+# ============================================================================
+# Misc
+# ============================================================================
+# Backup files
+*.backup
+*_backup
+backup/
+
+# Old versions
+*.old
+old/
+
+# TODO and notes (personal)
+TODO.md
+NOTES.md
+scratch.py
+test.py
+
+# Large files (Git LFS should handle these)
+*.bin
+*.dat
+
+# ============================================================================
+# IMPORTANT: Files to ALWAYS commit
+# ============================================================================
+# Keep these even if matched by patterns above
+!README.md
+!LICENSE
+!requirements.txt
+!.gitignore
+!.gitattributes
+
+# Keep example/template files
+!data/example_*.txt
+!models/README.md
+!models/.gitkeep
+
+# Keep configuration templates
+!config.template.json
+!.env.example
+
+# ============================================================================
+# Notes for Collaborators
+# ============================================================================
+# If you need to track large files:
+# 1. Install Git LFS: git lfs install
+# 2. Track file type: git lfs track "*.pth"
+# 3. Commit .gitattributes: git add .gitattributes
+#
+# To check what's being ignored:
+# git status --ignored
+#
+# To force-add an ignored file:
+# git add -f filename
