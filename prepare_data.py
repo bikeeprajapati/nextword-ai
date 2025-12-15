@@ -295,7 +295,11 @@ def print_data_statistics(text, sequences, word_to_idx):
     print(f"  • Total characters: {len(text):,}")
     print(f"  • Total words: {len(words):,}")
     print(f"  • Unique words: {unique_words:,}")
-    print(f"  • Average word length: {sum(len(w) for w in words) / len(words):.1f} chars")
+    
+    if len(words) > 0:
+        print(f"  • Average word length: {sum(len(w) for w in words) / len(words):.1f} chars")
+    else:
+        print(f"  • Average word length: N/A (no words found)")
     
     print(f"\nProcessed Data:")
     print(f"  • Training sequences: {len(sequences):,}")
